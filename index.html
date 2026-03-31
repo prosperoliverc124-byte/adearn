@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AdEarn — Watch short ads and earn real cash. Withdraw directly to your Nigerian bank account. Earn up to ₦18,000/month!">
+  <meta name="theme-color" content="#00C853">
+  
+  <title>AdEarn — Watch Ads. Earn Real Cash.</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://i.postimg.cc/Qd18SVRd/IMG-20260331-144636.jpg">
+  <link rel="apple-touch-icon" href="https://i.postimg.cc/Qd18SVRd/IMG-20260331-144636.jpg">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ═══════════════════════════════════════════════════════
+   AdEarn — All Styles Embedded
+   ═══════════════════════════════════════════════════════ */
+
+/* ── CSS Variables ── */
+:root {
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F4F7F5;
+  --bg-dark: #0A0F0D;
+  --accent: #00C853;
+  --accent-deep: #1B5E20;
+  --accent-glow: #00E676;
+  --text-primary: #0A0F0D;
+  --text-muted: #6B7C74;
+  --text-white: #FFFFFF;
+  --success: #00E676;
+  --warning: #FFB300;
+  --error: #FF1744;
+
+  --glow-sm: 0 0 15px rgba(0,200,83,0.3);
+  --glow-md: 0 0 25px rgba(0,200,83,0.4);
+  --glow-lg: 0 0 40px rgba(0,200,83,0.5);
+  --glow-text: 0 0 15px rgba(0,230,118,0.6);
+  --glow-text-lg: 0 0 30px rgba(0,230,118,0.8);
+
+  --font-head: 'Exo 2', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+
+  --sp-xs: 4px;
+  --sp-sm: 8px;
+  --sp-md: 16px;
+  --sp-lg: 24px;
+  --sp-xl: 32px;
+  --sp-2xl: 48px;
+  --sp-3xl: 64px;
+
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 16px;
+  --r-xl: 24px;
+  --r-full: 50%;
+
+  --t-fast: 150ms ease;
+  --t-base: 200ms ease;
+  --t-smooth: 300ms ease;
+
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.1);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.14);
+
+  --z-sticky: 200;
+  --z-overlay: 400;
+  --z-modal: 500;
+  --z-loader: 1000;
+}
+
+/* ── Reset ── */
+*,*::before,*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { text-decoration: none; color: inherit; }
+ul, ol { list-style: none; }
+img { max-width: 100%; height: auto; display: block; }
+button {
+  font-family: var(--font-head);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+}
+input, textarea, select {
+  font-family: var(--font-body);
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+/* ── Typography ── */
+h1,h2,h3,h4,h5,h6 {
+  font-family: var(--font-head);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+h2 { font-size: clamp(1.5rem, 4vw, 2.5rem); }
+h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
+p { color: var(--text-muted); line-height: 1.7; }
+
+.text-glow { text-shadow: var(--glow-text); }
+.text-glow-lg { text-shadow: var(--glow-text-lg); }
+
+/* ── Buttons ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-sm);
+  padding: 14px 28px;
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: var(--r-md);
+  transition: all var(--t-base);
+  position: relative;
+  overflow: hidden;
+}
+.btn:hover { transform: translateY(-2px) scale(1.03); }
+.btn:active { transform: translateY(0) scale(0.97); }
+.btn-primary {
+  background: var(--accent);
+  color: var(--text-white);
+  box-shadow: var(--glow-md);
+}
+.btn-primary:hover {
+  box-shadow: var(--glow-lg);
+  background: #00D95F;
+}
+.btn-outline {
+  background: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+}
+.btn-outline:hover {
+  background: var(--accent);
+  color: var(--text-white);
+  box-shadow: var(--glow-md);
+}
+.btn-sm { padding: 10px 20px; font-size: 0.875rem; }
+.btn-lg { padding: 18px 36px; font-size: 1.125rem; }
+.btn-full { width: 100%; }
+
+/* ── Utilities ── */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--sp-md);
+}
+.section { padding: var(--sp-3xl) 0; }
+.text-center { text-align: center; }
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.flex-center { align-items: center; justify-content: center; }
+.flex-between { align-items: center; justify-content: space-between; }
+.gap-sm { gap: var(--sp-sm); }
+.gap-md { gap: var(--sp-md); }
+.gap-lg { gap: var(--sp-lg); }
+.grid { display: grid; }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.hidden { display: none !important; }
+</style>
+
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     LOADER SCREEN
+     ═══════════════════════════════════════ -->
+<div class="loader-screen">
+  <div class="loader-logo">
+    <img src="https://i.postimg.cc/Qd18SVRd/IMG-20260331-144636.jpg" alt="AdEarn Logo">
+  </div>
+  <div class="loader-wordmark">Ad<span>Earn</span></div>
+  <div class="loader-bar-wrap">
+    <div class="loader-bar"></div>
+  </div>
+  <p class="loader-tagline">Watch Ads. Earn Real Cash.</p>
+    </div>
